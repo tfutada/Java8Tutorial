@@ -13,7 +13,7 @@ public class NotLambda {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 
         int x = 0;
-        x = 3;
+        //x = 3;
         list.forEach( v ->
                 System.out.println(v * x)
         );

@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -15,17 +16,17 @@ public class Lambda {
         System.out.println("Result:" + f.apply(3));
 
         // Supplyer
-        generator(() -> "Hello");
+        System.out.println("repeat:" + repeat(3, "bye").get());
 
         // Consumer
         java.util.List<String> list = Arrays.asList("Vietnam", "Japan", "US");
-        Consumer<String> lambda = v -> System.out.println(v);
+        Consumer<String> lambda = System.out::println;
         list.forEach(lambda);
     }
 
-    // Supplier
-    public static void generator(Supplier<String> f) {
-        System.out.println(f.get());
+    // returns a Supplier
+    public static Supplier<String> repeat(int c, String s) {
+        return () -> String.join("", Collections.nCopies(c, s));
     }
 }
 
