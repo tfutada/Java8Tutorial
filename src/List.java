@@ -15,14 +15,18 @@ public class List {
         );
         // Method reference
         list.forEach(
-                System.out::println
+                System.out::println // Method Reference
         );
 
         // Java 8 w/ Stream API
         String[] a = {"Vietnam", "Japan", "US"};
-        Arrays.stream(a).forEach( v ->
-                System.out.println(v)
+        Arrays.stream(a).forEach(
+                System.out::println
         );
+
+        // method that takes a lambda
+        list.replaceAll( String::toUpperCase);
+        System.out.println("toUpper:" + list);
     }
 }
 
