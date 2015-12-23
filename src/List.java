@@ -13,10 +13,14 @@ public class List {
         list.forEach(v ->
                 System.out.println(v)
         );
+        // Method reference
+        list.forEach(
+                System.out::println
+        );
 
         // Java 8 w/ Stream API
-        String[] array = {"Vietnam", "Japan", "US"};
-        Arrays.stream(array).forEach( v ->
+        String[] a = {"Vietnam", "Japan", "US"};
+        Arrays.stream(a).forEach( v ->
                 System.out.println(v)
         );
     }
