@@ -8,25 +8,24 @@ import java.util.function.Supplier;
 /**
  * Hello World
  */
-public class Lambda {
+public class J09ConsumerSupplier {
 
     public static void main(String[] args) {
 
         // Function
         Function<Integer, Integer> f = x -> x * 2;
-        System.out.println("Result:" + f.apply(3));
+        System.out.println("Result: " + f.apply(3));
 
-        // Supplyer
-        System.out.println("repeat:" + repeat(3, "bye").get());
+        // Supplier
+        System.out.println("repeat: " + repeat(3, "bye").get());
 
         // Consumer
-        java.util.List<String> list = Arrays.asList("Vietnam", "Japan", "US");
         Consumer<String> lambda = System.out::println;
-        list.forEach(lambda);
+        Arrays.asList("Vietnam", "Japan", "US").forEach(lambda);
 
         // BiFunction
         BiFunction<String, String, String> f2 = (a, b) -> a + " " + b;
-        System.out.println("Concat:" + f2.apply("Hello", "World"));
+        System.out.println("Concat: " + f2.apply("Hello", "World"));
     }
 
     // returns a Supplier

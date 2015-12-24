@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 /**
  * Hello World
  */
-public class Functional {
+public class J08FunctionalIF {
 
     public static void main(String[] args) {
 
@@ -16,5 +16,6 @@ public class Functional {
         new Thread(r).start();
     }
 }
+
 
 

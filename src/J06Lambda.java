@@ -1,32 +1,35 @@
 import java.util.*;
+import static java.lang.System.out;
 
-public class List {
+public class J06Lambda {
     public static void main(String[] args) {
+
         java.util.List<String> list = Arrays.asList("Vietnam", "Japan", "US");
 
-        /* Used to be... */
+        // Used to be...
         for (String v : list) {
-            System.out.println(v);
+            out.println(v + " ");
         }
 
         // Java 8 w/ Lambda
         list.forEach(v ->
-                System.out.println(v)
-        );
-        // Method reference
-        list.forEach(
-                System.out::println // Method Reference
+                out.println(v + " ")
         );
 
-        // Java 8 w/ Stream API
+        // w/ Method Reference
+        list.forEach(
+                out::println
+        );
+
+        // w/ Stream API
         String[] a = {"Vietnam", "Japan", "US"};
         Arrays.stream(a).forEach(
-                System.out::println
+                out::println
         );
 
-        // method that takes a lambda
+        // replaceAll(). Method that takes a lambda
         list.replaceAll( String::toUpperCase );
-        System.out.println("toUpper:" + list);
+        out.println("toUpper:" + list);
     }
 }
 
