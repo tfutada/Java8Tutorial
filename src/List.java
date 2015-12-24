@@ -25,7 +25,7 @@ public class List {
         );
 
         // method that takes a lambda
-        list.replaceAll( String::toUpperCase);
+        list.replaceAll( String::toUpperCase );
         System.out.println("toUpper:" + list);
     }
 }

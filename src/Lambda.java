@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -22,6 +23,10 @@ public class Lambda {
         java.util.List<String> list = Arrays.asList("Vietnam", "Japan", "US");
         Consumer<String> lambda = System.out::println;
         list.forEach(lambda);
+
+        // BiFunction
+        BiFunction<String, String, String> f2 = (a, b) -> a + " " + b;
+        System.out.println("Concat:" + f2.apply("Hello", "World"));
     }
 
     // returns a Supplier
