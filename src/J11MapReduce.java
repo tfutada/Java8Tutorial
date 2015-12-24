@@ -25,7 +25,8 @@ public class J11MapReduce {
         Arrays.asList(1, 2, 3, 4, 5).stream()
                 .filter(x -> x % 2 == 0).forEach(
                     out::println
-        );
+                );
+
         // collect : toList()
         List<Integer> ret = Arrays.asList(1, 2, 3, 4, 5).stream()
                 .filter(x -> x % 2 == 0)
