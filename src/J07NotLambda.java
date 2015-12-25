@@ -3,6 +3,8 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.List;
+import static java.lang.System.out;
+
 /**
  * Hello World
  */
@@ -10,13 +12,15 @@ public class J07NotLambda {
 
     public static void main(String[] args) {
 
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+        Supplier<Integer> f1 = createCounter();
+        out.println(f1.get());
+        out.println(f1.get());
+    }
 
-        int x = 2;
-        //x = 3; // cannot be modified
-        list.forEach( v ->
-                System.out.println(v * x)
-        );
+    public static Supplier<Integer> createCounter() {
+        int counter = 0;
+        return () -> counter;
+//        return () -> counter++;
     }
 }
 
