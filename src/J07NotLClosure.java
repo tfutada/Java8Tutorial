@@ -8,7 +8,7 @@ import static java.lang.System.out;
 /**
  * Hello World
  */
-public class J07NotLambda {
+public class J07NotLClosure {
 
     public static void main(String[] args) {
 

@@ -16,7 +16,7 @@ public class J06Lambda {
                 out.println(v + " ")
         );
 
-        // w/ Method Reference
+        // w/ Method Reference ::
         list.forEach(
                 out::println
         );
